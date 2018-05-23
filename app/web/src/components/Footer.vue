@@ -14,7 +14,7 @@
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        GitHub autoupdate!
+        GitHub autoupdate! 2
       </div>
       <div class="col-lg-6">
       </div>
