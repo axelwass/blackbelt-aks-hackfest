@@ -140,7 +140,7 @@ metadata:
 spec:
   clusterServiceClassExternalName: azure-cosmosdb-mongo-account
   parameters:
-    location: eastus
+    location: centralus
     resourceGroup: heroes-cosmosdb
 ---
 apiVersion: servicecatalog.k8s.io/v1beta1

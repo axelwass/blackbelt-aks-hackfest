@@ -34,7 +34,7 @@ spec:
       imagePullSecrets:
         - name: acr-secret
       containers:
-      - image: <login server>/azureworkshop/rating-api:v1
+      - image: aksawtrainingregistry.azurecr.io/azureworkshop/rating-api:v1
         name:  heroes-api-cntnr
         resources:
           requests:
@@ -42,14 +42,14 @@ spec:
             memory: "55M"
         env:
         - name:  MONGODB_URI
-          value:  mongodb://mongodb:27017/webratings
+          value: mongodb://aw-hero:eBA3MW0Y2Lx4kaS5BkeL1mDmHQZ7SRq4L86SRKPxTzR0wXeRnDPB9wrR8IsgG9XUtiibRX0SZWYgxRl3FnqJwA==@aw-hero.documents.azure.com:10255/heroratings?ssl=true&replicaSet=globaldb
         ports:
         - containerPort:  3000
           name:  heroes-api
         imagePullPolicy: Always
       restartPolicy: Always
 ---
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
   name: web
@@ -85,7 +85,7 @@ spec:
       imagePullSecrets:
         - name: acr-secret
       containers:
-      - image: <login server>/azureworkshop/rating-web:v1
+      - image: aksawtrainingregistry.azurecr.io/azureworkshop/rating-web:new-version
         name:  heroes-web-cntnr
         resources:
           requests:
